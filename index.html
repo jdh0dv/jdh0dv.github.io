@@ -12,49 +12,53 @@
     <meta property="og:url" content="https://jeongdahee.net" />
     <meta property="og:image" content="https://jeongdahee.net/img/img_og.jpg"/>
     <title>DAHEE | 웹퍼블리셔 정다희의 포트폴리오</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script defter src="/js/default.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defter src="js/default.js"></script>
 </head>
 <body>
     <div id="wrap">
         <a href="#main" class="skip" tabindex="0">본문 바로가기</a>
         <!-- header -->
         <header id="header">
-            <h1 class="log"><a href="/"></a></h1>            
+            <div class="headerArea after">
+                <h1 class="logo"><a href="/"><img src="" alt="logo"></a></h1>            
+                <button type="button"
+                        class="menuBtn button"
+                        title="메뉴열기"
+                        aria-label="메뉴열기">
+                    <span class="ir">메뉴</span>
+                </button>
+            </div>
             <nav class="gnb">
-                <button class="menuBtn">메뉴열기</button>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Contact</a></li>
+                <ul class="category">
+                    <li><a href="#section1">Home</a></li>
+                    <li><a href="#section2">About</a></li>
+                    <li><a href="#section3">Portfolio</a></li>
+                    <li><a href="#section4">Contact</a></li>
                 </ul>
-            </nav>
+            </nav>            
         </header>
         <!-- //header -->
         <!-- main -->
         <main id="main">
-            <section class="home">
+            <section id="section1" class="section home">
                 <h2 class="blind">home</h2>
             </section>
-            <section class="about">
+            <section id="section2" class="section about">
                 <h2 class="blind">about</h2>                
             </section>
-            <section class="portfolio">
+            <section id="section3" class="section portfolio">
                 <h2 class="blind">portfolio</h2>                
             </section>
-            <section class="contact">
+            <section id="section4" class="section contact">
                 <h2 class="blind">contact</h2>                
             </section>
         </main>
         <!-- //main -->
         <!-- footer -->
         <footer id="footer">
-            <input type="text">
-            <input type="checkbox" name="" id="">
-            <button>작성</button>
-            <textarea name="" id="" cols="30" rows="10">ddd</textarea>
         </footer>  
         <!-- //footer -->
     </div>
