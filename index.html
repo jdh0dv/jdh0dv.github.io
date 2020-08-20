@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <title>DAHEE | 웹퍼블리셔 정다희의 포트폴리오</title>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,43 +12,56 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jeongdahee.net" />
     <meta property="og:image" content="https://jeongdahee.net/img/img_og.jpg"/>
-    <title>DAHEE | 웹퍼블리셔 정다희의 포트폴리오</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script defter src="js/default.js"></script>
 </head>
 <body>
     <div id="wrap">
         <a href="#main" class="skip" tabindex="0">본문 바로가기</a>
         <!-- header -->
-        <header id="header">
-            <div class="headerArea after">
-                <h1 class="logo"><a href="/"><img src="" alt="logo"></a></h1>            
+        <header id="header" class="header">
+            <h1 class="logo">
+                <a href="/">
+                    <b>DAHEE's Portfolio</b>
+                    웹퍼블리셔 정다희의 포트폴리오
+                </a>
+            </h1>    
+            <div class="gnbArea">
                 <button type="button"
                         class="menuBtn button"
                         title="메뉴열기"
                         aria-label="메뉴열기">
                     <span class="ir">메뉴</span>
                 </button>
-            </div>
-            <nav class="gnb">
-                <ul class="category">
-                    <li><a href="#section1">Home</a></li>
-                    <li><a href="#section2">About</a></li>
-                    <li><a href="#section3">Portfolio</a></li>
-                    <li><a href="#section4">Contact</a></li>
-                </ul>
-            </nav>            
+                <nav class="gnb">
+                    <ul class="category">
+                        <li><a href="#section1">Home</a></li>
+                        <li><a href="#section2">About</a></li>
+                        <li><a href="#section3">Portfolio</a></li>
+                        <li><a href="#section4">Contact</a></li>
+                    </ul>
+                </nav> 
+            </div>           
         </header>
         <!-- //header -->
         <!-- main -->
         <main id="main">
             <section id="section1" class="section home">
-                <h2 class="blind">home</h2>
+                <h2 class="blind">Home</h2>
+                <div class="visual">
+                    <div class="text">
+                        <h3>내가 코딩을 좋아하고 잘하는 이유</h3>
+                        <strong>"좋아하니까 더 잘하고 싶고, <br>잘하다 보면 더 좋아지더라구요!</strong>
+                    </div>
+                </div>
             </section>
             <section id="section2" class="section about">
-                <h2 class="blind">about</h2>                
+                <h2>About</h2>
+                <p class="intro">안녕하세요. <br><span class="pink">편리하고 감각적인 UI</span>와
+                    <span class="blue">논리적이고 최적화된 UX</span>를 구현하는 <br>
+                    웹퍼블리셔 정다희입니다.</p>                
             </section>
             <section id="section3" class="section portfolio">
                 <h2 class="blind">portfolio</h2>                

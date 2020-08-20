@@ -1,4 +1,15 @@
+/* fonts */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap');
+
+
 /* common */
+body {
+    position: relative;
+    font-family: 'Spoqa Han Sans', sans-serif;
+    font-weight: 400;
+    color: #181818;
+}
 .skip,
 .blind {
     background-color: yellow;
@@ -21,100 +32,134 @@
     border: none;
 }
 
-.section {
-    height: 800px;
-}
 
 
-/***** header *****/
-.headerArea {
-    width: 1280px;
-    margin: 0 auto;
-    padding: 3em 0 2em;
-    overflow: hidden;
+/*  header */
+.header {
+    padding: 55px 0 40px;
+    text-align: center;
 }
-.headerArea .logo {
-    float: left;
+.header .logo {
+    display: inline-block;
+    font-family: 'Spoqa Han Sans';
+    color: #888;
+    letter-spacing: 0.2em;
 }
-.headerArea .gnb {
-    float: right;
+.header .logo b {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #181818;
 }
-/* menuBtn */
-.headerArea .menuBtn {
-    position: relative;
-    float: right;
+
+/* .gnbArea  */
+.gnbArea {
+    position: fixed;
+    width: 140px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+.gnbArea .menuBtn {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     width: 40px;
     background: none;
     z-index: 1000;
 }
-.headerArea .menuBtn span {
+.gnbArea .menuBtn span {
     display: block;
     margin: 10px 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
     text-indent: -999999px;
-    background-color: #181818;
-    border-radius: 10px;    
+    background-color: #181818; 
 }
-.headerArea .menuBtn::before {
+.gnbArea .menuBtn::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background-color: #181818;
-    border-radius: 10px;
 }
-.headerArea .menuBtn::after {
+.gnbArea .menuBtn::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 4px;
-    background-color: #181818;
-    border-radius: 10px;    
+    height: 3px;
+    background-color: #181818;  
 }
-.headerArea .menuBtn.active {
+.gnbArea .menuBtn.active {
     z-index: 1000;
 }
-/* catogry */
-.gnb { 
-    transition: .4s right;
-    position: absolute;
-    top: 0;
-    right: 0%;
-    height: 100%;
-    max-width: 500px;
-    opacity: 0;
-    background:rgba(0,0,0,.1);    
-}
-.gnb.active { 
-    width: 40%;
-    opacity: 1;
-    z-index: 100;
-}
 
-/***** home *****/
+
+/* home */
 .home {
-    background-color: antiquewhite;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.home .visual {
+    position: relative;
+    display: table;
+    width:  calc(100% - 140px);
+    height: 700px;
+    background-image: url(/img/bgVIsual01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.home .visual:before {
+    content: 'HELLO';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20rem;
+    font-weight: 700;
+    color: rgba(20,20,20,0.04);
+}
+.home .visual:after {
+    content: 'WORLD!';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20rem;
+    font-weight: 700;
+    color: rgba(20,20,20,0.04);
+}
+.home .visual .text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 
 
-/***** about *****/
+
+/* about */
 .about {
-    background-color: skyblue;
+    height: 1000px;
 }
 
 
-/***** portfolio *****/
+/* portfolio */
 .portfolio {
     background-color: pink;
 }
 
 
-/***** contact *****/
+/* contact */
 .contact {
     background-color: yellowgreen;
-}
+}3
