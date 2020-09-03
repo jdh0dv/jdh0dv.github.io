@@ -79,11 +79,12 @@ body {
 /* .gnbArea  */
 .gnbArea {
     position: fixed;
-    width: 0;
+    width: 120px;
     height: 100%;
     top: 0;
     right: 0;
     z-index: 100;
+    background:#fff;
     transition: all .4s linear;
 }
 .gnbArea.active {
@@ -96,7 +97,6 @@ body {
 .gnbArea .menuBtn {
     position: absolute;
     top: 50%;
-    left: -70px;
     transform: translate(-50%,-50%);
     width: 40px;
     background: none;
@@ -210,9 +210,10 @@ body {
 .home .visual {
     position: relative;
     display: table;
-    width:  calc(100% - 140px);
+    width:  100%;
     height: 700px;
-    background-image: url('/img/bgVisual01.jpg');
+    /*background-image: url('http://jeongdahee.net/img/bgVisual01.jpg');*/
+    background-color: gray;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -242,7 +243,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 1.4;
     font-family: 'NeoDunggeunmo';
     color: #fff;
@@ -251,6 +252,7 @@ body {
     margin-bottom: 0.5em;
     font-family: 'Spoqa Han Sans';
     font-size: 0.6em;
+    letter-spacing: -0.05em;
 }
 
 
@@ -279,14 +281,8 @@ body {
 /* ------------------- media query ------------------- */
 /* Tablet & Desktop Device */
 @media all and (max-width:1440px) {
-    .gnbArea .menuBtn {
-        left: -5vw;
-    }
     .menuBtn.active {
         left: 5vw;
-    }
-    .home .visual {
-        width: 90%;
     }
     
 }
@@ -298,9 +294,6 @@ body {
 @media all and (max-width:768px){
     .header {
         padding:5% 0 3%;
-    }
-    .gnbArea.active {
-        width: 100%;
     }
     .gnbArea .menuBtn {
         top: 5%;
