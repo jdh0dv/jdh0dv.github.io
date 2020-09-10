@@ -1,9 +1,9 @@
 'use strict';
 
-// 메뉴버튼 
-$(document).ready(function(){
-    $('.menuBtn').click(function(){
-        $(this).toggleClass('active');
-        $('.gnbArea').toggleClass('active');  
-    });
+// project
+$(function(){
+    $('.project_item').click(function(){
+        $('.project_item').removeClass('active')
+        $(this).addClass('active')
+    })
 })

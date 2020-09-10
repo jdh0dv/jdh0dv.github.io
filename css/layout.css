@@ -53,10 +53,9 @@ body {
 
 
 
-
-
 /*  header */
 .header {
+    width: 100%;
     padding: 55px 0 40px;
     text-align: center;
 }
@@ -70,39 +69,37 @@ body {
 .header .logo b {
     display: block;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.8em;
     font-weight: 700;
     letter-spacing: -0.05em;
     color: #181818;
 }
 
-/* .gnbArea  */
-.gnbArea {
+/* .gnb_area  */
+.gnb_area {
     position: fixed;
-    width: 120px;
+    width: 10%;
     height: 100%;
     top: 0;
     right: 0;
     z-index: 100;
-    background:#fff;
-    transition: all .4s linear;
 }
-.gnbArea.active {
+.gnb_area.active {
     width: 400px;
     background: #2b2b2b;
     box-shadow: 5px 0 10px rgba(0,0,0,1);
 }
 
 
-.gnbArea .menuBtn {
+.gnb_area .menuBtn {
     position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    top: 70px;
     width: 40px;
     background: none;
+    transform: translate(-100%);
     z-index: 1000;
 }
-.gnbArea .menuBtn span {
+.gnb_area .menuBtn span {
     display: block;
     margin: 10px 0;
     width: 100%;
@@ -110,7 +107,7 @@ body {
     text-indent: -999999px;
     background-color: #181818; 
 }
-.gnbArea .menuBtn::before {
+.gnb_area .menuBtn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -119,7 +116,7 @@ body {
     height: 3px;
     background-color: #181818;
 }
-.gnbArea .menuBtn::after {
+.gnb_area .menuBtn::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -147,54 +144,54 @@ body {
     background:#fff;
 }
 
-.gnbArea .gnb {
+.gnb_area .gnb {
     opacity:0;
 }
-.gnbArea.active .gnb {
+.gnb_area.active .gnb {
     width: calc(100% - 120px);
     float: right;
     height:100%;
     display: table;
     opacity: 1;  
 }
-.gnbArea.active .category {
+.gnb_area.active .category {
     position: relative;
     height: 50%;
     padding: 10vh 0 0;
     border-bottom:1px solid rgba(255,255,255,.3)
 }
 
-.gnbArea.active .category li {
+.gnb_area.active .category li {
     text-align: left;
     padding: 2vh 0;
     font-family: 'Montserrat';    
     font-weight: 500;
-    font-size: 2.7rem;
+    font-size: 2.7em;
     color: rgba(255,255,255,.5);
 }
-.gnbArea.active .category li:hover {
+.gnb_area.active .category li:hover {
     animation-name: moveLeft;
     animation-duration: 2s;
 }
 
-.gnbArea.active .category li:hover {
+.gnb_area.active .category li:hover {
     color: rgba(255,255,255,1);
 }
-.gnbArea.active .category li a {
+.gnb_area.active .category li a {
     display: block;
 }
 
-.gnbArea.active .sns {
+.gnb_area.active .sns {
     position: absolute;
     bottom: 10%;
 }
-.gnbArea.active .sns dl {
+.gnb_area.active .sns dl {
     text-align: left;
     padding: 0.5em 0;
-    font-size: 1rem;
+    font-size: 1em;
     color: #fff;
 }
-.gnbArea.active .sns dl dd{
+.gnb_area.active .sns dl dd{
     margin-top: 10px;
     font-size: 0.9em;
     font-weight: 300;
@@ -225,7 +222,7 @@ body {
     left: -0.2em;
     top: 0;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17rem;
+    font-size: 17em;
     font-weight: 800;
     color: rgba(20,20,20,0.04);
 }
@@ -235,7 +232,7 @@ body {
     right: 0;
     bottom: 0;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17rem;
+    font-size: 17em;
     font-weight: 800;
     color: rgba(20,20,20,0.04);
 }
@@ -243,7 +240,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     line-height: 1.4;
     font-family: 'NeoDunggeunmo';
     color: #fff;
@@ -256,23 +253,6 @@ body {
 }
 
 
-/* about */
-.about {
-    height: 1000px;
-}
-
-
-/* portfolio */
-.portfolio {
-    background-color: pink;
-}
-
-
-/* contact */
-.contact {
-    background-color: yellowgreen;
-}
-
 
 
 
@@ -281,25 +261,14 @@ body {
 /* ------------------- media query ------------------- */
 /* Tablet & Desktop Device */
 @media all and (max-width:1440px) {
-    .menuBtn.active {
-        left: 5vw;
-    }
+
     
 }
 @media all and (min-width:768px) and (max-width:1024px) {
 
     
 }
-/* ------------------- Mobile ------------------- */
+/* Mobile */
 @media all and (max-width:768px){
-    .header {
-        padding:5% 0 3%;
-    }
-    .gnbArea .menuBtn {
-        top: 5%;
 
-    }
-    .home .visual {
-        width: 100%;
-    }
 }
