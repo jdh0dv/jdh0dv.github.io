@@ -2,8 +2,10 @@
 
 // project
 $(function(){
-    $('.project_item').click(function(){
-        $('.project_item').removeClass('active')
+    $('.project_item').mouseenter(function(){
         $(this).addClass('active')
     })
+    $('.project_item').mouseleave(function(){
+        $(this).removeClass('active')
+    })    
 })
