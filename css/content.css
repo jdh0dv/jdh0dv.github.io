@@ -1,12 +1,60 @@
 /* common */
-#main>section {
-    position: relative;
-    width: 100%;
+#main           {
+    margin-top: 130px;
 }
 
-/* about */
-.about { }
 
+/* home */
+.home .visual {
+    display: table;
+    position: relative;
+    left: -100%;
+    width: 100%;
+    height: 560px;
+    background: url('/img/bg_visual.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0;
+    transition: all 1s;
+    transition-delay: .5s;
+}
+.home .visual p {
+    position: relative;
+    bottom: -100px;
+    display: table-cell;
+    text-align: center;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: 0.5em;
+    vertical-align: middle;
+    opacity: 0;
+    transition: all 1s;
+    transition-delay: 2s;    
+}
+.home .visual p span {
+    display: inline-block;
+    padding: 0.5em 0.3em 0.5em 0.8em;
+    border: 2px solid rgba(255,255,255,.5);
+}
+.home .goal {
+    position: relative;
+    top: -100px;
+    margin: 100px 0;
+    text-align: center;
+    opacity: 0;
+}
+.home .goal p{
+    padding: 2.5em 0;
+    line-height: 1.5;
+    color: rgba(0,0,0,.6);
+    background: url('/img/icon_quot_left.svg') no-repeat 50% top, url('/img/icon_quot_right.svg') no-repeat 50% bottom;
+    background-size: 1em;
+}
+.home .goal.on {
+    top: 0;
+    opacity: 1;
+    transition: all .4s;
+}
 
 /* project */
 .project .jjzoo { background-image: url('/img/img_jjzoo.png'); }
@@ -155,21 +203,32 @@
 
 
 /* ------------------- media query ------------------- */
+
 /* Tablet & Desktop Device */
-@media all and (max-width:1919px) {
-    .project_item { width: 32%;}
+@media all and (min-width:2560px) {
+    .inner  { max-width: 1920px;}
 }
 @media all and (max-width:1366px) {
     .project_item               { width: 32%; height: 400px;}
     .project_item .text_area h3 { font-size: 1.8em}
     .project .etc p             { width: 92%; margin-left: auto; margin-right: auto;}
 }
-@media all and (max-width:1024px) {
+@media all and (min-width:768px) and (max-width:1024px) {
+    .home .visual                       { height:400px; background-attachment: initial;}
+    .home .visual p                     { font-size: 1.2em;}    
+
     .project_item                       { width: 48%; box-shadow: 3px 3px 8px rgba(0,0,0,.1);}    
     .project_item.active .img_area img  { max-width: 90%; }
 }
+
 /* Mobile */
-@media all and (max-width:768px){
+@media all and (max-width:767px){
+    #main                   { margin-top: 100px;}
+    .home .visual           { height: 400px; }
+    .home .visual p         { font-size: 1em; letter-spacing: 0.3em; line-height: 2;} 
+    .home .visual p span    { padding: 0.05em 0.1em 0.05em 0.5em;}
+    .home .goal p           { font-size: 0.9em; line-height: 1.5;}
+
     .project ul             { width:92%; margin:0 auto}
     .project_item           { width: 98%; height: 350px; margin:15px 0;}   
     .project_item.active .text_area a { padding: 4em 2em 2em}

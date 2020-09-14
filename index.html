@@ -24,19 +24,21 @@
         <a href="#main" class="skip" tabindex="0">본문 바로가기</a>
         <!-- header -->
         <header id="header" class="header">
-            <h1 class="logo">
-                <a href="/">
-                    <b>DAHEE's Portfolio</b>
-                    웹퍼블리셔 정다희의 포트폴리오
-                </a>
-            </h1>    
-            <div class="gnb_area">
+            <div class="header_area inner">
+                <h1 class="logo">
+                    <a href="/">
+                        <b>DAHEE's Portfolio</b>
+                        웹퍼블리셔 정다희의 포트폴리오
+                    </a>
+                </h1>                 
                 <button type="button"
-                        class="menuBtn button"
+                        class="menu_btn_open button"
                         title="메뉴열기"
                         aria-label="메뉴열기">
-                    <span class="ir">메뉴</span>
+                    <span class="ir"></span>
                 </button>
+            </div>   
+            <div class="gnb_area">
                 <nav class="gnb">
                     <ul class="category">
                         <li><a href="#section1">Home</a></li>
@@ -50,25 +52,42 @@
                             <dd>djeong082@gmail.com</dd>
                         </dl>
                         <dl>
+                            <dt>Call</dt>
+                            <dd>010.8964.2385</dd>
+                        </dl>                        
+                        <dl>
                             <dt>Github</dt>
                             <dd><a href="https://github.com/jdh0dv" target="_blank" title="새창열기">https://github.com/jdh0dv</a></dd>
                         </dl>                        
                     </div>                    
-                </nav> 
+                </nav>
+                <button type="button"
+                        class="menu_btn_close button"
+                        title="메뉴닫기"
+                        aria-label="메뉴닫기"
+                        style="display: none;">
+                    <span class="ir"></span>
+                </button>                 
             </div>           
         </header>
         <!-- //header -->
         <!-- main -->
         <main id="main">
-            <section id="section1" class="section home">
+            <section id="section1" class="section home inner">
                 <h2 class="blind">home</h2> 
                 <div class="visual">
-                    <p>make the world by <span>code</span></p>
+                    <div class="bg_area"></div>
+                    <p>make the world <br class="mobile">by <span>code</span></p>
                 </div>
                 <div class="goal">
-                    <p>웹, 또 하나의 세상<br>그 곳에서 저는 꿈을 꿉니다.</p>
+                    <p>
+                        <i></i>
+                        웹, 또 하나의 세상<br>그 곳에서 저는 꿈을 꿉니다.
+                        <i></i>
+                    </p>
                 </div>
             </section>
+            <!--
             <section id="section2" class="section about">
                 <div class="greeting">
                     <h2 class="tit"><span class="color">A</span>bout</h2> 
@@ -154,6 +173,7 @@
                     </div>
                 </div>
             </section>
+            
             <section id="section3" class="section project">
                 <h2 class="blind">Project</h2>             
                 <ul>
@@ -435,6 +455,7 @@
                     </p>
                 </div>
             </section>
+            
             <section id="section4" class="section contact">
                 <div class="sub_tit">
                     <h2><span class="color">contact</span> me</h2>
@@ -455,10 +476,11 @@
                     </ul>
                 </div>         
             </section>
+            -->
         </main>
         <!-- //main -->
         <!-- footer -->
-        <footer id="footer">
+        <footer id="footer" class="footer">
             <p>COPYRIGHT ⓒ 2020 jeongdagee.net ALL RIGHT RESERVED.</p>
         </footer>  
         <!-- //footer -->
