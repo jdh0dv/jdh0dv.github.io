@@ -17,7 +17,8 @@ $(document).ready(function(){
     $(section1).find('p').css({
         bottom: 0,
         opacity: 1
-    });             
+    }); 
+    $('.home .goal').addClass('on')
 
     //scroll 애니메이션 효과
 
@@ -39,11 +40,9 @@ $(document).ready(function(){
         var win_top = $(window).scrollTop()
 
         if( win_top >= 1){
-            $('.header').addClass('fixed')
-            $('.home .goal').addClass('on')            
+            $('.header').addClass('fixed')          
         }else{
-            $('.header').removeClass('fixed')  
-            $('.home .goal').removeClass('on')               
+            $('.header').removeClass('fixed')                
         }        
     })
 
