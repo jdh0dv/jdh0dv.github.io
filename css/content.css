@@ -159,7 +159,7 @@ h2.tit span {
 }
 .about .sub_tit {
     position: relative;
-    height: 200px;
+    height: auto;
     text-align: center;
 }
 .about .sub_tit h3 {
@@ -430,33 +430,75 @@ h2.tit span {
 @media all and (min-width:2560px) {
     .inner  { max-width: 1920px;}
 }
+
 @media all and (max-width:1366px) {
     .project_item               { width: 32%; height: 400px;}
     .project_item .text_area h3 { font-size: 1.8em}
     .project .etc p             { width: 92%; margin-left: auto; margin-right: auto;}
+
+    .about>div                  { width:90%; overflow: hidden;}
+
+    .project .inner             { width: 100%;}
+    .project_item .text_area a          { padding: 3em 2em;}        
 }
 @media all and (min-width:768px) and (max-width:1024px) {
     .home .visual                       { height:400px; background-attachment: initial;}
     .home .visual p                     { font-size: 1.2em;}    
 
+    .about .img_area                    { width: 40%;}
+    .about .sub_tit .bg_tit             { font-size: 4em;}
+
     .project_item                       { width: 48%; box-shadow: 3px 3px 8px rgba(0,0,0,.1);}    
     .project_item.active .img_area img  { max-width: 90%; }
+
+    .about .sub_tit .bg_tit             { font-size: 4em;}    
+
 }
 
 /* Mobile */
 @media all and (max-width:767px){
     #main                   { margin-top: 100px;}
+    h2.tit                  { font-size: 2em;}
+
     .home .visual           { height: 400px; }
     .home .visual p         { font-size: 1em; letter-spacing: 0.3em; line-height: 2;} 
     .home .visual p span    { padding: 0.05em 0.1em 0.05em 0.5em;}
-    .home .goal p           { font-size: 0.9em; line-height: 1.5;}
+    .home .goal             { margin:50px 0;}
+    .home .goal p           { font-size: 0.75em; line-height: 1.5;}
 
-    .project ul             { width:92%; margin:0 auto}
-    .project_item           { width: 98%; height: 350px; margin:15px 0;}   
+    .about .greeting h3         { font-size: 1.5em;}
+    .about .history             { margin-top: 3em; font-size: 0.85em;}
+    .about .history .con        { width: calc(100% - 6em);}
+    .about .history li          { padding-bottom: 1em; padding-left: 15px;}
+    .about .history li::before  { width: 10px; height: 10px; border-width: 3px;}
+    .about .history li::after   { left: 4px;}
+    .about .img_area            { position: static; width: 90%; margin:50px auto 0; padding-bottom: 50px; transform: none; background-size: 100%; background-position-x: 50px;}
+    .about .img_area img        { width: 90%;}
+    .about .sub_tit .bg_tit     { font-size: 2em; line-height: 100px;}
+    .about .sub_tit h3          { font-size: 1.3em; line-height: 100px;}
+    .about .skills              { margin: 100px auto;}
+    .about .skill_list>ul       { display: block;}
+    .about .skill_list>ul>li    { width: 100%; padding:2em 0; font-size: 0.9em; border-bottom: 1px solid #eee;}
+    .about .skill_list>ul>li:last-child { border:none;}    
+    .about .skill_list p        { min-height: auto; margin-bottom: 1em; text-align: justify;}
+
+    .project .sub_tit           { position: relative; top: 0; text-align: left;}
+    .project .sub_tit .strong   { font-size: 1.3em;}
+    .project .sub_tit strong    { font-size: 1em;}
+    .project_item .img_area img  { max-width: 70%;}   
+    .project_item           { width: 48%; height: 40vw; margin:15px 0;}   
     .project_item.active .text_area a { padding: 4em 2em 2em}
     .project_item .text_area h3 { font-size:1.5em;}
+    .project .etc               { margin-top: 50px;}    
     .project .etc h3            { font-size: 1.5em; word-break: keep-all;}
-    .project .etc p             { font-size: 1em; word-break: keep-all;}
-    .project .etc a             { color: #ffa132; font-weight: 500;}  
-    .project .etc strong        { display:inline-block; margin-top:1em; font-size: 1.2em;}  
+    .project .etc p             { font-size: 0.7em; word-break: keep-all;}
+    .project .etc p br          { display: none;}    
+    .project .etc strong        { display:inline-block; margin-top:1em; font-size: 1.2em;}          
+    .project_item .text_area a          { padding: 1em; font-size: 0.9em;}  
+
+    .contact                    { margin-top: 100px; padding: 100px 0 200px;}
+    .contact::before            { top: -50px; height: 100px;}
+    .contact .sub_tit h2        { font-size: 1.3em;}
+    .contact .sub_tit .bg_tit   { font-size: 2em;}
+    .contact .resume li         { margin:0.3em 0; font-size: 0.9em;}
 }
