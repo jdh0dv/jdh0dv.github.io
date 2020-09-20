@@ -74,9 +74,21 @@ h2.tit span {
 
 
 /* about */
+
 .about>div {
     position: relative;
     width: 1300px;
+}
+.about .greeting {
+    position: relative;
+    top: 0;
+    left: -100px;
+    transition: all .4s;
+    opacity: 0;
+}
+.about .greeting.active {
+    left: 0;
+    opacity: 1;
 }
 .about .greeting h3 {
     margin-top: 0.5em;
@@ -148,11 +160,17 @@ h2.tit span {
 }
 .about .img_area {
     position: absolute;
-    right: 0;
+    right: -200px;
     width: 50%;
     padding-bottom: 100px;
     transform: translateY(-100%);
     background: url('/img/bg_about.jpg') no-repeat 150px bottom;
+    opacity: 0;
+    transition: all .4s;
+}
+.about .img_area.active {
+    right:0;
+    opacity: 1;
 }
 .about .skills {
     margin: 150px auto 200px;
@@ -472,7 +490,7 @@ h2.tit span {
     .about .history li          { padding-bottom: 1em; padding-left: 15px;}
     .about .history li::before  { width: 10px; height: 10px; border-width: 3px;}
     .about .history li::after   { left: 4px;}
-    .about .img_area            { position: static; width: 90%; margin:50px auto 0; padding-bottom: 50px; transform: none; background-size: 100%; background-position-x: 50px;}
+    .about .img_area            { position: relative; width: 90%; margin:50px auto 0; padding-bottom: 50px; transform: none; background-size: 100%; background-position-x: 50px;}
     .about .img_area img        { width: 90%;}
     .about .sub_tit .bg_tit     { font-size: 2em; line-height: 100px;}
     .about .sub_tit h3          { font-size: 1.3em; line-height: 100px;}

@@ -182,7 +182,7 @@ body {
     animation: move_left 2s;
 }
 
-.gnb_area. .category li:hover {
+.gnb_area .category li:hover {
     color: rgba(255,255,255,1);
 }
 .gnb_area .category li a {

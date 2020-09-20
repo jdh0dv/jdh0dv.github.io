@@ -21,6 +21,32 @@ $(document).ready(function(){
     $('.home .goal').addClass('on')
 
     //scroll 애니메이션 효과
+    $(window).scroll(function(){
+        var win_top = $(window).scrollTop()
+        var win_h = $(window).height()
+        var wrap1 = $('#section2').offset().top
+        var wrap1_5 = $('#section2 .skills').offset().top        
+        var wrap2 = $('#section3').offset().top
+        var wrap3 = $('#section4').offset().top												
+
+        if( win_top >= wrap1 - 200){
+            $('.greeting').addClass('active')
+            $('.img_area').addClass('active')  
+            $('.skills').addClass('active')                      
+        }
+
+        if( win_top >= wrap1_5 -300 ){
+            $('#section2 .skills').addClass('active')
+        }
+
+        if( win_top >= wrap2 -300 ){
+            $('#section3').addClass('active')
+        }
+        
+        if( win_top >= wrap3 -300 ){
+            $('#section4').addClass('active')
+        }							
+    })    
 
 
     // 메뉴버튼 
