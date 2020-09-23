@@ -74,7 +74,9 @@ h2.tit span {
 
 
 /* about */
-
+.about  {
+    overflow: hidden;
+}
 .about>div {
     position: relative;
     width: 1300px;

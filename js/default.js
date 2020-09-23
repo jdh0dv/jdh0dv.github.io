@@ -59,7 +59,11 @@ $(document).ready(function(){
         $('.gnb_area').removeClass('active');  
         $('.menu_btn_open').show();
         $(this).hide();        
-    });    
+    });  
+    $('.category>li>a').click(function(){
+        $('.gnb_area').removeClass('active');  
+        $('.menu_btn_open').show();      
+    });        
 
     //scroll fix
     $(window).scroll(function(){
