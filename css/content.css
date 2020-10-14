@@ -509,6 +509,7 @@ h2.tit span {
     .project_item           { width: 48%; height: 40vw; margin:15px 0;}   
     .project_item.active .text_area a { padding: 4em 2em 2em}
     .project_item .text_area h3 { font-size:1.5em;}
+    .project_item .text_area dl { display: none;}    
     .project .etc               { margin-top: 50px;}    
     .project .etc h3            { font-size: 1.5em; word-break: keep-all;}
     .project .etc p             { font-size: 0.7em; word-break: keep-all;}
