@@ -38,7 +38,7 @@ $(document).ready(function(){
         if( window_top >= section1+section2-300){
             $('#section3 h2').animate({
                 right :'50%',
-                marginRight :'-7.5em'
+                marginRight :'-6.2em'
             },3000, 'easeOutBack')          
         }else{                   
         }             

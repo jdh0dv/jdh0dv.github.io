@@ -2,10 +2,12 @@
 /* Header */
 #header{
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     padding-top: 20px;
     text-align: center;    
-    z-index: 10;
+    z-index: 1000;
 }
 #header p{
     position: relative;
@@ -57,13 +59,16 @@
         transform: translate3d(0, -66%, 0);
     }
 }
-.intro{
-    position: relative;
+.bg_section{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(#009fdc,#8993ff);
+    z-index: 1;
 }
-.intro::after{
+.bg_section::after{
     content: '';
     position: absolute;
     top: 0;
@@ -77,6 +82,14 @@
     background-attachment: fixed;
     opacity: 0.2;
 }
+.intro{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: none;
+}
 
 .intro .text_container{
     position: relative;
@@ -86,13 +99,13 @@
     text-align: center;
     color: rgba(255, 255, 255, 1);    
     overflow: hidden;
-    z-index: 1;    
+    z-index: -1;    
 }
 
 .intro .text_list{
     font-weight: 600;
-    font-size: 3.5em;
-    letter-spacing: 0.01em;    
+    font-size: 3.8em;
+    letter-spacing: 0.05em;    
     color: rgba(255, 255, 255, 1);  
     animation-name: change;
     animation-duration: 10s;
@@ -103,14 +116,12 @@
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
-.intro .text_list .item.point{
-    font-size: 1.12em;
-}
 
 
 /* greeting */
 .greeting{ 
-    padding: 10% 0;
+    padding: 200px 0;
+    background: #fff;    
 }
 .greeting .inner{ 
     display: flex;
@@ -182,6 +193,8 @@
     top: 5%;
     right: -5%;
 }
+
+
 /* promise */
 @keyframes icon_move{
     0%, 100%{
@@ -194,15 +207,16 @@
 .promise{
     position: relative;
     width: 100%;
-    padding: 10% 0;
+    padding: 350px 0 120px;
     overflow: hidden;
+    background: #fff;
 }
 .promise .inner{
     width: 1300px;
 }
 .promise h2{
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: -2em;
     font-size: 4em;
 }
@@ -225,44 +239,143 @@
     animation-iteration-count: infinite;
     z-index: -1;
 }
-.promise .appeal {
-    margin-top: 5%;
+.promise .appeal{
     display: flex;
     flex-wrap: wrap;
 }
-.promise .appeal>li {
+.promise .appeal>li{
     width: 50%;
-    padding: 5%;
+    padding: 50px;
     box-sizing: border-box;
     transition: all .2s;
 }
-.promise .appeal h3 {
+.promise .appeal h3{
     display: inline-block;
     position: relative;
-    font-size: 1.65em;
+    font-size: 1.7em;
     letter-spacing: -0.03em;
 }
-.promise .appeal>li:hover {
-    background: #f7f7f7;
-    box-shadow: 
+.promise .appeal>li:hover{
+    background: #f9f9f9;
 }
-.promise .appeal p {
-    margin: 25px 0 20px;
+.promise .appeal p{
+    margin: 35px 0 30px;
     color: #555;
     font-size: 0.9em;
-    line-height: 1.7;
+    line-height: 1.8;
     letter-spacing: -0.03em;
 }
-.promise .appeal .tag li {
+.promise .appeal .tag li{
     display: inline-block;
     margin-right: 5px;
-    padding: 3px 10px;
+    padding: 0.3em 1em;
     border-radius: 20px;
     letter-spacing: -0.03em;
     color: #009fdc;
     font-family: 'Noto Sans KR';
     font-weight: 600;
-    font-size: 0.9em;
-    border: 2px solid #ffdc38;
+    font-size: 1em;
+    border: 2px solid #dedede;
     background: #fff;
+}
+
+
+/* portfolio */
+.portfolio{
+    background:#fff;
+}
+.portfolio .inner{
+    position: static;
+    width: 1600px;
+    margin-right: 0;
+    padding-top: 50px;
+}
+.portfolio .inner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    margin-left: 10%;
+    padding-top: 200px;
+    background: #f4f4f4;
+    height: 100%;
+    z-index: -1;
+}
+.portfolio h2{
+    position: absolute;
+    width: 1200px;
+    left: 50%;
+    top: -1.1em;
+    margin-left: -500px;
+    font-size: 4em;
+    writing-mode: vertical-lr;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: -0.2em;
+}
+.portfolio h2 p:first-child{
+    margin-left: -105px;
+}
+.portfolio h2 .p_color{
+    margin-top: 1em;
+}
+.portfolio h2 .border{
+    position: relative;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: -4px 0 #333, 0 4px #333, 2px 0 #333, 0 -2px #333;
+}
+.portfolio h2 .border::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 44px;
+    height: 27px;
+    background: url(/plani/img/icon_quotes_left.png);
+}
+.portfolio h2 .border::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 45px;
+    height: 27px;
+    background: url(/plani/img/icon_quotes_right.png);
+}
+.portfolio .link_list{
+    position: relative;
+    padding-left: 400px;
+    width: calc(100% - 400px);
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.portfolio .link_list li{
+    width: 30%;
+    margin: 2%;
+    margin-right: 0;
+}
+.portfolio .link_list li .img_area{
+    overflow: hidden;
+    max-height: 400px;
+}
+.portfolio .link_list li img{
+    width: 100%;
+}
+
+
+
+
+
+
+/* ------------------- media query ------------------- */
+
+@media all and (max-width:1440px) {
+    .portfolio .link_list{
+        padding-left: 25%;
+        width: 1300px;
+    }
+    
 }
