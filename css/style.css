@@ -93,7 +93,7 @@ i.swing{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image:url(/plani/img/bg_intro02.jpg);
+    background-image:url(/img/bg_intro02.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -251,7 +251,7 @@ i.swing{
     height: 132px;
     top: 0;
     right: -20px;
-    background: url(/plani/img/icon_promise.png) no-repeat;
+    background: url(/img/icon_promise.png) no-repeat;
     animation-name: icon_move;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -327,7 +327,7 @@ i.swing{
     left: 50px;
     width: 350px;
     height: 800px;
-    background: url('/plani/img/enfj-protagonist.svg') no-repeat;
+    background: url('/img/enfj-protagonist.svg') no-repeat;
     background-size: 100%;
 }
 .portfolio h2{
@@ -364,7 +364,7 @@ i.swing{
     left: -50px;
     width: 44px;
     height: 27px;
-    background: url(/plani/img/icon_quotes_left.png);
+    background: url(/img/icon_quotes_left.png);
 }
 .portfolio h2 .border::after{
     content: '';
@@ -373,7 +373,7 @@ i.swing{
     right: -50px;
     width: 45px;
     height: 27px;
-    background: url(/plani/img/icon_quotes_right.png);
+    background: url(/img/icon_quotes_right.png);
 }
 .portfolio .link_list{
     position: relative;
@@ -514,7 +514,7 @@ i.swing{
     height: 100%;
     top: 0;
     left: 0;
-    background: url('/plani/img/bg_plani.jpg');
+    background: url('/img/bg_plani.jpg');
     background-repeat: no-repeat ;
     background-size: 100%;
     background-position: 100% 100%;
