@@ -44,4 +44,15 @@ $(document).ready(function(){
         }             
     })
 
+
+    //마우스오버 이벤트
+	$('#section4 .item').mouseover(function(){
+		$(this).addClass('on');
+		$(this).siblings().addClass('off');
+	});	
+	$('#section4 .item').mouseleave(function(){
+		$(this).removeClass('on');
+		$(this).siblings().removeClass('off');
+	});
+
 })
