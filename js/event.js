@@ -5,11 +5,8 @@ $(document).ready(function(){
     const section1 = $('#section1').height();
     const section2 = $('#section2').height();
     const section3 = $('#section3').height();
-    const section4 = $('#section4').height();            
-    console.log('intro 높이 : '+section1);
-    console.log('greeting 높이 : '+section2);
-    console.log('promise 높이 : '+section3);
-    console.log('portfolio 높이 : '+section4);   
+    const section4 = $('#section4').height();  
+    const section5 = $('#section5').height();         
   
 
     //스크롤 이벤트
@@ -34,18 +31,52 @@ $(document).ready(function(){
             $('#section2 .txt_bg').removeClass('active')                    
         }     
         
-        //intro background 변경
+        //appeal title 위치변경
         if( window_top >= section1+section2-300){
             $('#section3 h2').animate({
                 right :'50%',
-                marginRight :'-6.2em'
+                marginRight :'-7.3em'
             },3000, 'easeOutBack')          
-        }else{                   
-        }             
+        } 
+        
+        //appeal title 위치변경 & appeal content 나타남
+        if( window_top >= section1+section2-300){
+            $('#section3 h2').animate({
+                right :'50%',
+                marginRight :'-7.3em'
+            },3000, 'easeOutBack')  
+            
+            $('#section3 .appeal>li.1depth').delay(800).animate({
+                top: 0,
+                opacity: 1
+            },500, 'linear')  
+            
+            $('#section3 .appeal>li.2depth').delay(1500).animate({
+                top: 0,
+                opacity: 1
+            },500, 'linear')              
+        }      
+        
+        //intro background 및 ul 변경
+        if( window_top >= section1+section2+section3+300){
+            $('#section4 .inner').addClass('active')  
+            $('#section4 .link_list').addClass('active')                      
+        }          
+
     })
 
 
     //마우스오버 이벤트
+    //appeal tag
+	$('#section3 .tag li').mouseover(function(){
+		$(this).addClass('on');
+		$(this).siblings().addClass('off');
+	});	
+	$('#section3 .tag li').mouseleave(function(){
+		$(this).removeClass('on');
+		$(this).siblings().removeClass('off');
+    });
+    //portfolio item
 	$('#section4 .item').mouseover(function(){
 		$(this).addClass('on');
 		$(this).siblings().addClass('off');
@@ -53,6 +84,8 @@ $(document).ready(function(){
 	$('#section4 .item').mouseleave(function(){
 		$(this).removeClass('on');
 		$(this).siblings().removeClass('off');
-	});
+    });    
+    
+    
 
 })
