@@ -25,7 +25,7 @@ $(document).ready(function(){
         }
         
         //intro background 변경
-        if( window_top >= section1-300){
+        if( window_top >= section1){
             $('#section2 .txt_bg').addClass('active')          
         }else{
             $('#section2 .txt_bg').removeClass('active')                    
