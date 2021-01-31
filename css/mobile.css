@@ -1,0 +1,242 @@
+@media screen and (max-width: 768px) {
+    /* common */
+    body{
+        font-size: 14px;
+    }
+    .inner{
+        width: 88%;
+    }
+
+    /* style */
+
+    /* intro */
+    @keyframes change{
+        10%{
+            transform: translate3d(0, 0, 0);
+        }
+        30%{
+            transform: translate3d(0, -40%, 0);
+        }
+        70%{
+            transform: translate3d(0, -80%, 0);
+        }
+        80%{
+            transform: translate3d(0, -100%, 0);
+        }                      
+    }
+    .intro .text_list{
+        font-size: 2.5em;
+        word-break: keep-all;
+    }
+    .intro .text_container{
+        height: 6em;
+        line-height: 1.3;
+        animation-duration: 8s;
+    }
+    /* greeting */
+    .greeting{
+        padding: 10em 0 7em;
+    }
+    .greeting .inner{
+        flex-wrap: wrap;
+    }
+    .greeting .inner p{
+        word-break: keep-all;
+    }    
+    .greeting .inner p br{
+        display: none;
+    }
+    .greeting .txt_area{
+        order:2;
+    }
+    .greeting .img_area{
+        order: 1;
+        width: 60%;
+        margin-bottom: 3em;
+        margin-left:32%;
+    }
+    .greeting .img_area img{
+        width: 100%;
+    }
+    .greeting .img_area .speech{
+        right: -14%;
+    }
+    .greeting .img_area .speech img {
+        width: 85px;
+    }
+    
+    /* promise */
+    .promise{
+        padding: 12em 0;
+    }
+    .promise .inner{
+        width: 88%;
+    }
+    .promise h2{
+        top: 2em;
+        width: 100%;
+        right: -10em;
+        word-break: keep-all;
+        font-size: 2.4em;
+        line-height: 1.3;
+    }
+    .promise h2.active{
+        right: auto;
+        left: 6%;
+        margin-right: 0;
+    }
+    @keyframes img_move_top{
+        0%, 100%{
+            top:-45px;
+        }
+        50%{
+            top:-55px;
+        }  
+    }
+    .promise h2 .color::after{
+        width: 75px;
+        background-size: 100%;
+    }
+    .promise .appeal>li{
+        width: 100%;
+        margin-top: 3em;
+        padding: 0;
+    }
+    .promise .appeal h3{
+        text-align: left;
+    }
+    .promise .appeal p{
+        margin: 10px 0 20px;
+        word-break: keep-all;
+    }
+    .promise .appeal p br{
+        display: none;
+    }
+    .promise .appeal .tag li{
+        margin-right: 2px;
+        margin-bottom: 5px;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    /* portfolio */
+    .portfolio .inner{
+        width: 88%;
+    }
+    .portfolio .inner.active::after{
+        width: 80%;
+    }
+    .portfolio h2{
+        width: 1em;
+        margin-left: 0;
+        font-size: 2.6em;
+        left: 4em;
+    }
+    .portfolio h2 .border::before{
+        width: 20px;
+        height: 13px;
+        left: -20px;
+        background-size: 100%;
+    }
+    .portfolio h2 .border::after{
+        width: 20px;
+        height: 13px;
+        right: -20px;
+        background-size: 100%;
+    }
+    .portfolio .link_list{
+        padding-left: 5%;
+        width: calc(100% - 5%);
+    }
+    .portfolio .link_list li{
+        width: 60%;
+        margin-top: 0;
+        margin-left: 9em;
+    }
+    .portfolio .link_list li:nth-child(3n+2){
+        top: 0;
+    }
+    .portfolio .link_list li.etc{
+        width: 45%;
+        margin-top: 0.8em;
+    }
+    .portfolio .link_list h3{
+        padding-top: 15px;
+    }
+    .portfolio .link_list h3,
+    .portfolio .link_list p{
+        width: 90%; 
+        line-height: 1.2;
+        margin: 0 auto;
+        word-break: keep-all;
+    }
+    .portfolio .link_list li .img_area{
+        height: 10em;
+    }
+    .portfolio .link_list li.on::after{
+        display: none;
+    }
+    .portfolio h2 .certi{
+        bottom: -100px;
+        left: -400px;
+    }
+    .portfolio .maintenance{
+        font-size: 1.3em;
+        text-align: left;
+    }
+    .portfolio .maintenance br{
+        display: none;
+    }    
+    /* skill */
+    .skill{
+        padding: 5em 0 7em;
+    }
+    .skill .inner{
+        display: block;
+    }
+    .skill .inner::after{
+        width: 90%;
+    }
+    .skill h2{
+        font-size: 2.8em;
+        line-height: 1.3;
+    }
+    .skill ul{
+        margin-left: 0;
+        margin-top: 2em;
+    }
+    .skill ul li{
+        display: block;
+        text-align: center;
+    }
+    .skill li:nth-child(1) img{
+        width: 100px;
+    }
+    .skill li:nth-child(2){
+        margin:1em 0 1.5em;
+    }    
+    .skill li:nth-child(2) img{
+        width: 20px;
+    }
+    .skill li:nth-child(3) img{
+        width: 150px;
+    }    
+     /* finish */
+     .finish{
+         padding: 7em 1em;
+         font-size: 1.5em;
+         letter-spacing: -0.05em;
+         text-align: left;
+         word-break: keep-all;
+     }
+     .finish br{
+        display: none;
+    }     
+    .finish .wrap_up{
+        font-size: 0.7em;
+    }
+    .finish .wrap_up br{
+        display: block;
+    }
+
+}

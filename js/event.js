@@ -31,20 +31,10 @@ $(document).ready(function(){
             $('#section2 .txt_bg').removeClass('active')                    
         }     
         
-        //appeal title 위치변경
-        if( window_top >= section1+section2-300){
-            $('#section3 h2').animate({
-                right :'50%',
-                marginRight :'-7.3em'
-            },3000, 'easeOutBack')          
-        } 
-        
+
         //appeal title 위치변경 & appeal content 나타남
         if( window_top >= section1+section2-300){
-            $('#section3 h2').animate({
-                right :'50%',
-                marginRight :'-7.3em'
-            },3000, 'easeOutBack')  
+            $('#section3 h2').addClass('active')
             
             $('#section3 .appeal>li.1depth').delay(800).animate({
                 top: 0,

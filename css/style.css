@@ -219,6 +219,11 @@
     top: 12%;
     right: -2em;
     font-size: 4em;
+    transition: all .8s ease-in-out;
+}
+.promise h2.active{
+    right : 50%;
+    margin-right : -7.3em;
 }
 .promise h2 .color{
     position: relative;
@@ -495,9 +500,8 @@
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 90%;
-    margin-right: 10%;
     background: #003e56;
     height: 100%;
     z-index: -1;
@@ -558,15 +562,4 @@
     margin-top: 3em;
     font-size: 0.55em;
     font-weight: 300;
-}
-
-
-/* ------------------- media query ------------------- */
-
-@media all and (max-width:1440px) {
-    .portfolio .link_list{
-        padding-left: 25%;
-        width: 1300px;
-    }
-    
 }
