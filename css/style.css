@@ -171,6 +171,9 @@
 }
 .greeting .img_area{
     position: relative;
+    width: 350px;
+    margin-top: 50px;
+    margin-right: 50px;
     line-height: 0;
 }
 .greeting .img_area::before{
@@ -184,19 +187,22 @@
     box-sizing: border-box;
     z-index: -1;
 }
+.greeting .img_area img{
+    width: 100%;
+}
 @keyframes icon_move_rotate{
     0%, 100%{
         transform: rotate(0deg);
     }
     50%{
-        transform: rotate(15deg);
+        transform: rotate(5deg);
     }  
 }
 .greeting .img_area .speech{
     display: block;
     position: absolute;
-    top: 5%;
-    right: -6%;
+    top: 15px;
+    right: -15%;
     animation-name: icon_move_rotate;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;    

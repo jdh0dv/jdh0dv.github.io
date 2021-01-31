@@ -11,9 +11,6 @@ $(document).ready(function(){
 
     //스크롤 이벤트
     $(window).scroll(function(){
-        //스크롤 실시간으로 콘솔로그로 확인
-        const height = $(document).scrollTop();
-        console.log(height);
         //실시간 높이값 가져오기
         var window_top = $(window).scrollTop()
 

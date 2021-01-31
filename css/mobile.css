@@ -17,7 +17,7 @@
         30%{
             transform: translate3d(0, -40%, 0);
         }
-        70%{
+        60%{
             transform: translate3d(0, -80%, 0);
         }
         80%{
@@ -54,6 +54,7 @@
         width: 60%;
         margin-bottom: 3em;
         margin-left:32%;
+        margin-right: 0;
     }
     .greeting .img_area img{
         width: 100%;
