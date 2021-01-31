@@ -379,7 +379,7 @@
     letter-spacing: -0.05em;
     border-bottom: 1px solid #cdcdcd;
     padding: 0 0 20px 400px;
-    writing-mode: initial;
+    writing-mode: rl;
     margin-left: -115px;
     color: #555;
     z-index: 10;
